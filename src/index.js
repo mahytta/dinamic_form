@@ -63,21 +63,25 @@ function showUsers() {
     const user = arrayRegisters[index];
 
     usersHtml += `
+    <div class= "container2">
     <div class="card">
+      <div class="card-header">
+        <h5 class="mb-0">${user.name}</h5>
+      </div>
       <div class="card-body">
-      <h6 class="mb-0">Segundo Usuario</h6>
         <form>
           <div class="mb-3">
             <input type="text" readonly value="${user.name}" class="form-control" name="userName" placeholder="Nombre">
           </div>
           <div class="mb-3">
-            <input type="email" class="form-control" name="userEmails" placeholder="Correo">
+            <input type="email" value="${user.email}"  class="form-control" name="userEmails" placeholder="Correo">
           </div>
           <div class="mb-3">
-            <input type="number" class="form-control" name="userNumber" placeholder="Edad">
+            <input type="number" value="${user.age}" class="form-control" name="userNumber" placeholder="Edad">
           </div>
         </form>
       </div>
+    </div>
     </div>`;
   }
 
